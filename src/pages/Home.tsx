@@ -9,8 +9,8 @@ import { Header } from 'react-native/Libraries/NewAppScreen';
 import { useNavigation, useRoute } from '@react-navigation/native';
 
 
-export default function Home(){
-  const navigation = useNavigation()
+export default function Home({navigation}: any){
+  
 
   function handleSearch(){
     
@@ -19,7 +19,7 @@ export default function Home(){
   }
 
   function handleMenu(){
-    
+    navigation.openDrawer()
   }
 
   function handleCart(){

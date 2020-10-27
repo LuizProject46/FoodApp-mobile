@@ -6,13 +6,14 @@ import {Feather} from '@expo/vector-icons'
 import Home from '../pages/Home';
 import Profile from '../pages/Profile';
 import Favorites from '../pages/Favorites';
+import DrawerBar from './DrawerBar';
 
 
 const {Navigator,Screen} = createBottomTabNavigator()
 
 
 
-export default function TabBar(){
+export default function TabBar({navigation}: any){
   return (
     
       <Navigator 
@@ -46,7 +47,8 @@ export default function TabBar(){
         activeTintColor: '#32264d',
       }}
       >
-        <Screen name='home' component={Home}
+        
+        <Screen name='home' initialParams={navigation} component={Home}
         options={{
           tabBarLabel: '',
           tabBarIcon: ({color,size,focused}) =>{
@@ -70,7 +72,7 @@ export default function TabBar(){
         
         />
 
-      <Screen name='profile' component={Profile}
+      <Screen name='profile' component={Profile} initialParams={navigation}
         options={{
           tabBarLabel: '',
           tabBarIcon: ({color,size,focused}) =>{
