@@ -15,7 +15,7 @@ export default function Home({navigation}: any){
   function handleSearch(){
     
     console.log("oi")
-    //navigation.navigate('search')
+    navigation.navigate('search')
   }
 
   function handleMenu(){
@@ -46,7 +46,7 @@ export default function Home({navigation}: any){
           Comidas deliciosas para você
         </Text>
       </View>
-      <View style={styles.searchForm}>
+      <View  style={styles.searchForm}>
         <TextInput style={styles.searchInput} onSubmitEditing={handleSearch}
            placeholder='Pesquisar' />
       </View>

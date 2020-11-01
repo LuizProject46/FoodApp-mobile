@@ -7,6 +7,7 @@ import Home from '../pages/Home';
 import Profile from '../pages/Profile';
 import Favorites from '../pages/Favorites';
 import DrawerBar from './DrawerBar';
+import Search from '../pages/Search';
 
 
 const {Navigator,Screen} = createBottomTabNavigator()
@@ -66,6 +67,18 @@ export default function TabBar({navigation}: any){
           tabBarIcon: ({color,size,focused}) =>{
             return (
               <Feather name='heart' size={size} color={focused ? '#E92554' : '#ADADAF'}/>
+            )
+          }
+        }}
+        
+        />
+
+      <Screen name='search' component={Search}
+        options={{
+          tabBarLabel: '',
+          tabBarIcon: ({color,size,focused}) =>{
+            return (
+              <Feather name='search' size={size} color={focused ? '#E92554' : '#ADADAF'}/>
             )
           }
         }}

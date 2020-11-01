@@ -14,6 +14,10 @@ import { StyleSheet } from 'react-native';
 import Header  from '../components/Header';
 import DrawerBar from './DrawerBar';
 import Profile from '../pages/Profile';
+import SignupStep1 from '../pages/Signup/SignupStep1';
+import SignupStep2 from '../pages/Signup/SignupStep2';
+import SignupStep3 from '../pages/Signup/SignupStep3';
+
 
 const {Navigator,Screen} = createStackNavigator()
 
@@ -29,6 +33,13 @@ export default function Stack(){
         
         <Screen name='signin' component={Signin}
         />
+         <Screen name='signup1' component={SignupStep1}
+        />
+         <Screen name='signup2' component={SignupStep2}
+        />
+        <Screen name='signup3' component={SignupStep3}
+        />
+        
         <Screen name='home' component={DrawerBar}/>
         <Screen name='search' component={Search}/>
         <Screen name='cart'component={Cart}

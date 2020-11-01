@@ -33,6 +33,12 @@ export default function Profile(){
               <Feather style={{position: 'absolute',top: 20,right:45}} name='log-in' size={25} color='#fff'/>
             
             </TouchableOpacity>
+            <TouchableOpacity style={styles.btnRegister} onPress={()=>{
+              navigation.navigate('signup1')
+            }} >
+              <Text style={styles.textRegister}>Não tem uma conta? Cadastre-se já!</Text>
+            </TouchableOpacity>
+            
           </View>
         </View>
       </KeyboardAvoidingView>
@@ -102,5 +108,17 @@ const styles = StyleSheet.create({
     borderRadius: 16,
    
 
+  },
+  btnRegister:{
+    width: 300,
+    alignItems: 'center',
+    marginTop: 20,
+   
+
+  },
+  textRegister:{
+    fontSize: 17,
+    fontFamily:  'Nunito_700Bold',
+    color: '#E92554'
   }
 })
